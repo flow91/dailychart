@@ -199,8 +199,8 @@ Dailychart.prototype.defaultOptions = {
   lineWidth: 1,
   colorPositive: '#33AE45',
   colorNegative: '#EB5757',
-  fillPositive: '',
-  fillNegative: '',
+  fillPositive: '#D6EFDA',
+  fillNegative: '#FBDDDD',
   closeWidth: 1,
-  closeColor: '#e0e0e0'
+  closeColor: '#E0E0E0'
 };
