@@ -114,13 +114,11 @@ class Dailychart {
     const svg = this.svgElement();
     const linePrevious = this.lineElement(this.previous);
 
-    const pathPositive = this.pathElement(d, lineWidth, colorPositive, '', idPositive);
-    const areaPositive = this.pathElement(dPositive, 0, '', fillPositive, idPositive);
+    const areaPositive = this.pathElement(dPositive, lineWidth, colorPositive, fillPositive, idPositive);
     const clipPositive = this.clipElement(idPositive);
     const rectPositive = this.rectElement(0, 0, this.width, this.previous);
 
-    const pathNegative = this.pathElement(d, lineWidth, colorNegative, '', idNegative);
-    const areaNegative = this.pathElement(dNegative, 0, '', fillNegative, idNegative);
+    const areaNegative = this.pathElement(dNegative, lineWidth, colorNegative, fillNegative, idNegative);
     const clipNegative = this.clipElement(idNegative);
     const rectNegative = this.rectElement(0, this.previous, this.width, this.height - this.previous);
 
@@ -133,8 +131,6 @@ class Dailychart {
     svg.appendChild(linePrevious);
     svg.appendChild(areaPositive);
     svg.appendChild(areaNegative);
-    svg.appendChild(pathPositive);
-    svg.appendChild(pathNegative);
 
     this.element.appendChild(svg);
   }
