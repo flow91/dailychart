@@ -152,7 +152,7 @@ class Dailychart {
     line.setAttribute('x2', this.width);
     line.setAttribute('y2', y);
     line.setAttribute('stroke', this.options.closeColor);
-    line.setAttribute('stroke-width', 0.5); // this.options.closeWidth);
+    line.setAttribute('stroke-width', this.options.closeWidth);
 
     line.style.shapeRendering = 'crispEdges';
 
@@ -200,6 +200,6 @@ Dailychart.prototype.defaultOptions = {
   colorNegative: '#EB5757',
   fillPositive: '#D6EFDA',
   fillNegative: '#FBDDDD',
-  closeWidth: 1,
+  closeWidth: 0.5,
   closeColor: '#E0E0E0'
 };
