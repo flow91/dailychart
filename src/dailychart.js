@@ -10,8 +10,8 @@ class Dailychart {
       this.element = el;
     }
 
-    this.width = this.options.width || el.offsetWidth;
-    this.height = this.options.height || el.offsetHeight;
+    this.width = el.offsetWidth || this.options.width;
+    this.height = el.offsetHeight || this.options.height;
 
     if (!el.getAttribute('data-dailychart-values') || el.getAttribute('data-dailychart-values').length === 0) {
       return; // nothing to draw
@@ -194,8 +194,8 @@ class Dailychart {
 }
 
 Dailychart.prototype.defaultOptions = {
-  width: undefined,
-  height: undefined,
+  width: 250,
+  height: 50,
   lineWidth: 1,
   colorPositive: '#33AE45',
   colorNegative: '#EB5757',
