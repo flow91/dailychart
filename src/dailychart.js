@@ -139,8 +139,7 @@ class Dailychart {
     const svg = document.createElementNS(SVG_NS, 'svg');
 
     svg.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns', SVG_NS);
-    svg.setAttribute('width', this.width);
-    svg.setAttribute('height', this.height);
+    svg.setAttribute('viewBox', "0 0 " + this.width + " " + this.height);
 
     return svg;
   }
