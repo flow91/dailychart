@@ -128,9 +128,9 @@ class Dailychart {
     svg.appendChild(clipPositive);
     svg.appendChild(clipNegative);
 
-    svg.appendChild(linePrevious);
     svg.appendChild(areaPositive);
     svg.appendChild(areaNegative);
+    svg.appendChild(linePrevious);
 
     this.element.appendChild(svg);
   }
@@ -152,7 +152,7 @@ class Dailychart {
     line.setAttribute('x2', this.width);
     line.setAttribute('y2', y);
     line.setAttribute('stroke', this.options.closeColor);
-    line.setAttribute('stroke-width', this.options.closeWidth);
+    line.setAttribute('stroke-width', 0.5); // this.options.closeWidth);
 
     line.style.shapeRendering = 'crispEdges';
 
